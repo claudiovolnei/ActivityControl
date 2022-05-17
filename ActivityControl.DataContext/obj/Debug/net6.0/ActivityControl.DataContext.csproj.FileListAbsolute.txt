@@ -1,0 +1,15 @@
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\bin\Debug\net6.0\ActivityControl.DataContext.deps.json
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\bin\Debug\net6.0\ActivityControl.DataContext.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\bin\Debug\net6.0\ActivityControl.DataContext.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\bin\Debug\net6.0\ActivityControl.Domain.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\bin\Debug\net6.0\ActivityControl.Domain.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.csproj.AssemblyReference.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.AssemblyInfoInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.AssemblyInfo.cs
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.csproj.CoreCompileInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.csproj.CopyComplete
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\refint\ActivityControl.DataContext.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ActivityControl.DataContext.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.DataContext\obj\Debug\net6.0\ref\ActivityControl.DataContext.dll

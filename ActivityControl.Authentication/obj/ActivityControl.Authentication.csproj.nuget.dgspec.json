@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Authentication\\ActivityControl.Authentication.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Authentication\\ActivityControl.Authentication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Authentication\\ActivityControl.Authentication.csproj",
+        "projectName": "ActivityControl.Authentication",
+        "projectPath": "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Authentication\\ActivityControl.Authentication.csproj",
+        "packagesPath": "C:\\Users\\psclaud\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Authentication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\psclaud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://tfs.br800.corpintra.net:8080/tfs/BMB/_packaging/NuGetBMB/nuget/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

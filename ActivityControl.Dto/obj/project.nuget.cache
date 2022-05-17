@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gKI8aiGU1F+bHxWvpLBI2F3+fhhWbA+Sz5k75QgTNw1mE+Lyb9AuqzEFKVLyzeztf5oozaoJpzXzsaZ0C78sQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\psclaud\\MVPs\\ActivityControl\\ActivityControl.Dto\\ActivityControl.Domain.Dto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\psclaud\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\psclaud\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

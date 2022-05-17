@@ -1,0 +1,12 @@
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\bin\Debug\net6.0\ActivityControl.Authentication.deps.json
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\bin\Debug\net6.0\ActivityControl.Authentication.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\bin\Debug\net6.0\ActivityControl.Authentication.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.csproj.AssemblyReference.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.AssemblyInfoInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.AssemblyInfo.cs
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.csproj.CoreCompileInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\refint\ActivityControl.Authentication.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ActivityControl.Authentication.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Authentication\obj\Debug\net6.0\ref\ActivityControl.Authentication.dll

@@ -1,0 +1,15 @@
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\bin\Debug\net6.0\ActivityControl.Domain.Dto.deps.json
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\bin\Debug\net6.0\ActivityControl.Domain.Dto.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\bin\Debug\net6.0\ActivityControl.Domain.Dto.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\bin\Debug\net6.0\ActivityControl.Domain.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\bin\Debug\net6.0\ActivityControl.Domain.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.csproj.AssemblyReference.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.AssemblyInfoInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.AssemblyInfo.cs
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.csproj.CoreCompileInputs.cache
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.csproj.CopyComplete
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\refint\ActivityControl.Domain.Dto.dll
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ActivityControl.Domain.Dto.pdb
+C:\Users\psclaud\MVPs\ActivityControl\ActivityControl.Dto\obj\Debug\net6.0\ref\ActivityControl.Domain.Dto.dll
