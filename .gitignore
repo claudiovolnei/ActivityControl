@@ -17,3 +17,8 @@ x64/
 # Bin and Obj
 bin
 obj
+
+#db
+ActivityControl.db
+ActivityControl.db-shm
+ActivityControl.db-wal
