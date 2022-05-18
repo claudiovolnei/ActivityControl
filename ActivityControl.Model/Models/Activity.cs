@@ -2,7 +2,7 @@
 
 namespace ActivityControl.Domain.Models;
 
-public class Activity
+public class Activity : BaseModel
 {
     public int Id { get; set; }
     public string Description { get; set; } = String.Empty;

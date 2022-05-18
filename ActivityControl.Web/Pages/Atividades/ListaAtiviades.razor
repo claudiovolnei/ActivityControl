@@ -1,0 +1,27 @@
+﻿@page "/atividades"
+@inject HttpClient http
+
+<h3>Atividades</h3>
+
+@if(Atividades == null)
+{
+    <MudProgressCircular Color="Color.Primary" Indeterminate="true"/>
+}
+else
+{
+    
+}
+
+@code {
+    public IEnumerable<ActivityDto> Atividades { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await GetAtividades();
+    }
+
+    protected async Task GetAtividades()
+    {
+        Atividades = await http.GetFromJsonAsync<IEnumerable<ActivityDto>>($"api/activity");
+    }
+}

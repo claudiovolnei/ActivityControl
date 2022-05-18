@@ -26,4 +26,10 @@ public class HoursUsedService : IHoursUsedService
         var hoursUseds = await _hoursUsedRepository.GetActivitysHourUsed(idActivity);
         return _mapper.Map<IEnumerable<HoursUsedDto>>(hoursUseds);
     }
+
+    public async Task UpdateHoursUsed(HoursUsedDto hoursUsedDto)
+    {
+        var hoursUsed = _mapper.Map<HoursUsed>(hoursUsedDto);
+        await _hoursUsedRepository.Update(hoursUsed);
+    }
 }

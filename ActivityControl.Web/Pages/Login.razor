@@ -1,0 +1,11 @@
+﻿@page "/"
+@inject AuthService auth
+<h3>Login</h3>
+<MudButton OnClick="SubmitForm" Variant="Variant.Filled">Entrar</MudButton>
+@code {
+    private async Task SubmitForm()
+    {
+        var user = new LoginDto { UserName = "admim", Password = "Cvsj#130293" };
+        var token = auth.Login(user);
+    }
+}

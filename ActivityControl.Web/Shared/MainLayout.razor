@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Color="Color.Primary" Fixed="false">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        Gestão de Tarefas
+        <MudSpacer />
+        <MudMenu>
+            <ActivatorContent>
+                <MudAvatar Image="Image/lkd.jpg" />
+            </ActivatorContent>
+            <ChildContent>
+                <MudMenuItem>Perfil</MudMenuItem>
+                <MudMenuItem>Sair</MudMenuItem>
+            </ChildContent>
+        </MudMenu>      
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen">
+        <NavMenu/>
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+@code {
+    bool _drawerOpen = true;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

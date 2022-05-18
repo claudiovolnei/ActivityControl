@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ActivityControl.WebAPI.Migrations
+namespace ActivityControl.DataContext.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Iniitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,6 +46,25 @@ namespace ActivityControl.WebAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Atividades",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Description = table.Column<string>(type: "varchar(200)", nullable: false),
+                    Observations = table.Column<string>(type: "varchar(500)", nullable: false),
+                    Status = table.Column<int>(type: "INTEGER", nullable: false),
+                    CriadoPor = table.Column<string>(type: "TEXT", nullable: false),
+                    AlteradoPor = table.Column<string>(type: "TEXT", nullable: false),
+                    CriadoEm = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    AlteradoEm = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Atividades", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -154,6 +173,30 @@ namespace ActivityControl.WebAPI.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "HorasUtilizadas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Start = table.Column<DateTime>(type: "varchar(200)", nullable: false),
+                    End = table.Column<DateTime>(type: "varchar(500)", nullable: false),
+                    ActivityId = table.Column<int>(type: "INTEGER", nullable: true),
+                    CriadoPor = table.Column<string>(type: "TEXT", nullable: false),
+                    AlteradoPor = table.Column<string>(type: "TEXT", nullable: false),
+                    CriadoEm = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    AlteradoEm = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HorasUtilizadas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_HorasUtilizadas_Atividades_ActivityId",
+                        column: x => x.ActivityId,
+                        principalTable: "Atividades",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -190,6 +233,11 @@ namespace ActivityControl.WebAPI.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HorasUtilizadas_ActivityId",
+                table: "HorasUtilizadas",
+                column: "ActivityId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -210,10 +258,16 @@ namespace ActivityControl.WebAPI.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "HorasUtilizadas");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Atividades");
         }
     }
 }

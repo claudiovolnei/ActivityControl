@@ -21,6 +21,12 @@ public class HoursUsedRepository : IHoursUsedRepository
         _context.HoursUseds.Add(hoursUsed);
         await _context.SaveChangesAsync();
         return hoursUsed;
+    }
 
+    public async Task<HoursUsed> Update(HoursUsed hoursUsed)
+    {
+        _context.Attach(hoursUsed).State = EntityState.Modified;
+        await _context.SaveChangesAsync();
+        return hoursUsed;
     }
 }

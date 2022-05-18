@@ -33,7 +33,8 @@ public class ActivityService : IActivityService
     }
     public async Task UpdateActivity(ActivityDto activityDto)
     {
-        var activity = _mapper.Map<Activity>(activityDto);
+        var activity = await _activityRepository.GetById(activityDto.Id.Value);
+        activity = _mapper.Map(activityDto, activity);
         await _activityRepository.Update(activity);
     }
     public async Task RemoveActivity(int id)

@@ -5,4 +5,5 @@ public interface IHoursUsedService
 {
     Task<IEnumerable<HoursUsedDto>> GetActivityHourUsed(int idActivity);
     Task AddHoursUsed(HoursUsedDto hoursUsedDto);
+    Task UpdateHoursUsed(HoursUsedDto hoursUsedDto);
 }

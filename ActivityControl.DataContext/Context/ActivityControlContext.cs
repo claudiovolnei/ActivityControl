@@ -1,4 +1,5 @@
 ﻿using ActivityControl.Domain.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,11 @@ namespace ActivityControl.DataContext.Context;
 
 public class ActivityControlContext : IdentityDbContext<IdentityUser>
 {
-    public ActivityControlContext(DbContextOptions<ActivityControlContext> options) : base(options) { }
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    public ActivityControlContext(DbContextOptions<ActivityControlContext> options, IHttpContextAccessor httpContextAccessor) : base(options) 
+    {
+        _httpContextAccessor = httpContextAccessor;
+    }
     public DbSet<Activity> Activitys { get; set; }
     public DbSet<HoursUsed> HoursUseds { get; set; }
 
@@ -50,5 +55,29 @@ public class ActivityControlContext : IdentityDbContext<IdentityUser>
         #endregion
 
         base.OnModelCreating(builder);
+    }
+
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        foreach (var history in this.ChangeTracker.Entries()
+            .Where(e => e.Entity is BaseModel && (e.State == EntityState.Added))
+            .Select(e => e.Entity as BaseModel)
+            )
+        {
+            history.CriadoPor = _httpContextAccessor.HttpContext.User.Identity.Name;
+            history.CriadoEm = DateTime.Now;
+            history.AlteradoPor = _httpContextAccessor.HttpContext.User.Identity.Name;
+            history.AlteradoEm = DateTime.Now;            
+        }
+
+        foreach (var history in this.ChangeTracker.Entries()
+                                        .Where(e => e.Entity is BaseModel && e.State == EntityState.Modified)
+                                        .Select(e => e.Entity as BaseModel))
+        {
+            history.AlteradoPor = _httpContextAccessor.HttpContext.User.Identity.Name;
+            history.AlteradoEm = DateTime.Now;
+        }
+
+        return await base.SaveChangesAsync();
     }
 }

@@ -8,22 +8,36 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace ActivityControl.WebAPI.Migrations
+namespace ActivityControl.DataContext.Migrations
 {
     [DbContext(typeof(ActivityControlContext))]
-    [Migration("20220512183519_Activity")]
-    partial class Activity
+    [Migration("20220517210434_Iniitial")]
+    partial class Iniitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.5");
 
-            modelBuilder.Entity("ActivityControl.Model.Models.Activity", b =>
+            modelBuilder.Entity("ActivityControl.Domain.Models.Activity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("AlteradoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AlteradoPor")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CriadoPor")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -41,7 +55,7 @@ namespace ActivityControl.WebAPI.Migrations
                     b.ToTable("Atividades", (string)null);
                 });
 
-            modelBuilder.Entity("ActivityControl.Model.Models.HoursUsed", b =>
+            modelBuilder.Entity("ActivityControl.Domain.Models.HoursUsed", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,6 +63,20 @@ namespace ActivityControl.WebAPI.Migrations
 
                     b.Property<int?>("ActivityId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("AlteradoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AlteradoPor")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CriadoPor")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("End")
                         .HasColumnType("varchar(500)");
@@ -255,9 +283,9 @@ namespace ActivityControl.WebAPI.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ActivityControl.Model.Models.HoursUsed", b =>
+            modelBuilder.Entity("ActivityControl.Domain.Models.HoursUsed", b =>
                 {
-                    b.HasOne("ActivityControl.Model.Models.Activity", "Activity")
+                    b.HasOne("ActivityControl.Domain.Models.Activity", "Activity")
                         .WithMany("HoursUseds")
                         .HasForeignKey("ActivityId");
 
@@ -315,7 +343,7 @@ namespace ActivityControl.WebAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ActivityControl.Model.Models.Activity", b =>
+            modelBuilder.Entity("ActivityControl.Domain.Models.Activity", b =>
                 {
                     b.Navigation("HoursUseds");
                 });
