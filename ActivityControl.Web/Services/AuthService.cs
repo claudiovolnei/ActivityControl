@@ -17,13 +17,16 @@ namespace ActivityControl.Web.Services
             throw new NotImplementedException();
         }
 
-        public async Task<string> Login(LoginDto loginDto)
+        public async Task<ResponseDto> Login(LoginDto loginDto)
         {
-            var configuration = $"{base._configuration.GetValue<string>("Backend")}/api/authenticate/login";
+            var configuration = $"{base._configuration.GetValue<string>("Backend")}api/authenticate/login";
             string json = JsonConvert.SerializeObject(loginDto);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-            var reponse = await _http.PostAsync(configuration, content);
-            return String.Empty;
+            var response = await _http.PostAsync(configuration, content);
+
+            return JsonConvert.DeserializeObject<ResponseDto>(response.Content.ReadAsStringAsync().Result);
         }
+
+
     }
 }

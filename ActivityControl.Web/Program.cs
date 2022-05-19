@@ -1,5 +1,4 @@
 using ActivityControl.Web.Services;
-using ActivityControl.Web.Services.Interface;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);

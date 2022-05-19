@@ -1,27 +1,74 @@
 ﻿@page "/atividades"
-@inject HttpClient http
+@inject IJSRuntime jsr
+@inject ActivityService activitService
 
 <h3>Atividades</h3>
 
-@if(Atividades == null)
+@if (string.IsNullOrEmpty(userdata))
 {
-    <MudProgressCircular Color="Color.Primary" Indeterminate="true"/>
+	<p><a href="/login">LOGIN TO ACCESS THIS DATA</a></p>
 }
 else
 {
-    
+    @if(Atividades == null)
+    {
+        <MudProgressCircular Color="Color.Primary" Indeterminate="true"/>
+    }
+    else
+    {
+        <table class="table">
+			<thead>
+				<tr>
+					<th>Descrição</th>
+					<th>Observação</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var atividade in Atividades)
+				{
+					<tr>
+						<td>@atividade.Description</td>
+						<td>@atividade.Observations</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+    }
 }
 
 @code {
-    public IEnumerable<ActivityDto> Atividades { get; set; }
+	public IEnumerable<ActivityDto> Atividades { get; set; }
+	string userdata;
 
-    protected async override Task OnInitializedAsync()
-    {
-        await GetAtividades();
-    }
 
-    protected async Task GetAtividades()
-    {
-        Atividades = await http.GetFromJsonAsync<IEnumerable<ActivityDto>>($"api/activity");
-    }
+	private async Task<string> GetJWT()
+	{
+		userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+		if (!string.IsNullOrWhiteSpace(userdata))
+		{
+			var dataArray = userdata.Split(';', 2);
+			if (dataArray.Length == 2)
+				return dataArray[1];
+		}
+		return null;
+	}
+
+	protected override async Task OnInitializedAsync()
+	{
+		await base.OnInitializedAsync();
+		try
+		{
+			ResponseDto response = await activitService.GetActivities(await GetJWT());
+
+			if (response.Success)
+				Atividades = (IEnumerable<ActivityDto>)response.Data;
+			else
+				await jsr.InvokeVoidAsync("localStorage.removeItem", "user").ConfigureAwait(false);
+				userdata = null;
+		}
+		catch (Exception ex)
+		{
+
+		}
+	}
 }

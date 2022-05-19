@@ -83,7 +83,7 @@ public class AuthenticateController : ControllerBase
             return Ok(new Response { Data = GetToken(authClaims) });
         }
 
-        return Unauthorized();
+        return Unauthorized(new Response { Success = false, Message = "Usuário não encontrado!"});
     }
 
     private TokenAuth GetToken(List<Claim> authClaims)
