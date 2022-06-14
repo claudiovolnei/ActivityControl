@@ -10,6 +10,7 @@ namespace ActivityControl.WebAPI.Mappings
         {
             CreateMap<HoursUsed, HoursUsedDto>().ReverseMap();
             CreateMap<Activity, ActivityDto>().ReverseMap();
+            CreateMap<LoginDto, User>().ReverseMap();
         }
     }
 }
