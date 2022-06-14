@@ -2,14 +2,9 @@
 {
     public partial class Role
     {
-        public Role()
-        {
-            Users = new HashSet<User>();
-        }
+        public Role() { }
 
         public short RoleId { get; set; }
         public string RoleDesc { get; set; }
-
-        public virtual ICollection<User> Users { get; set; }
     }
 }

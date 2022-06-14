@@ -1,6 +1,7 @@
 ﻿using ActivityControl.DataContext.Context;
 using ActivityControl.Domain.Dto.Dto;
 using ActivityControl.Domain.Models;
+using ActivityControl.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -68,7 +69,7 @@ namespace ActivityControlWebAPI.Controllers
         // POST: api/Users
         [HttpPost("Login")]
         public async Task<ActionResult<UserWithToken>> Login([FromBody] LoginDto loginDto)
-        {
+        {            
             var user = _mapper.Map<User>(loginDto);
             user = await _context.Users.Include(u => u.Role)
                                         .Where(u => u.EmailAddress == user.EmailAddress

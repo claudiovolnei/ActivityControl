@@ -1,4 +1,5 @@
-﻿using ActivityControlApp.Data;
+﻿using ActivityControl.Utils;
+using ActivityControlApp.Data;
 using ActivityControlWebAPI;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -22,7 +23,7 @@ namespace ActivityControlApp.Services
 
         public async Task<User> LoginAsync(User user)
         {
-            user.Password = Utility.Encrypt(user.Password);
+            //user.Password = Util.Encrypt(user.Password);
             string serializedUser = JsonConvert.SerializeObject(user);
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "Users/Login");
@@ -44,7 +45,7 @@ namespace ActivityControlApp.Services
 
         public async Task<User> RegisterUserAsync(User user)
         {
-            user.Password = Utility.Encrypt(user.Password);
+            user.Password = Util.Encrypt(user.Password);
             string serializedUser = JsonConvert.SerializeObject(user);
 
             var requestMessage = new HttpRequestMessage(HttpMethod.Post, "Users/RegisterUser");

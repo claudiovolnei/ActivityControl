@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivityControl.Authenticat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActivityControlApp", "ActivityControlApp\ActivityControlApp.csproj", "{E766D95A-1728-4E2A-890A-2E58317C2C67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActivityControl.Utils", "ActivityControl.Utils\ActivityControl.Utils.csproj", "{46292954-4AD9-442E-B763-3E31297BE807}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{E766D95A-1728-4E2A-890A-2E58317C2C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E766D95A-1728-4E2A-890A-2E58317C2C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E766D95A-1728-4E2A-890A-2E58317C2C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46292954-4AD9-442E-B763-3E31297BE807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46292954-4AD9-442E-B763-3E31297BE807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46292954-4AD9-442E-B763-3E31297BE807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46292954-4AD9-442E-B763-3E31297BE807}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{25C45A65-5A18-4EF3-8E61-266C7F5195B7} = {C08F6FC1-DD3F-4D7E-98FA-C2FD2ABF35B0}
 		{E63C675F-44FF-4140-A616-482B6C6E0CAF} = {25C45A65-5A18-4EF3-8E61-266C7F5195B7}
 		{E766D95A-1728-4E2A-890A-2E58317C2C67} = {3403C5E6-3441-44A2-9059-374E31E3AE98}
+		{46292954-4AD9-442E-B763-3E31297BE807} = {62FF9735-4470-46A0-B23A-FC9B95B1E2FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5EA6F42-4C4D-4E43-9598-F0802D27D90D}

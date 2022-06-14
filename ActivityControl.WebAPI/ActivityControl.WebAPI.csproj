@@ -32,6 +32,7 @@
     <ProjectReference Include="..\ActivityControl.Dto\ActivityControl.Domain.Dto.csproj" />
     <ProjectReference Include="..\ActivityControl.IoC\ActivityControl.IoC.csproj" />
     <ProjectReference Include="..\ActivityControl.Model\ActivityControl.Domain.csproj" />
+    <ProjectReference Include="..\ActivityControl.Utils\ActivityControl.Utils.csproj" />
   </ItemGroup>
 
 </Project>

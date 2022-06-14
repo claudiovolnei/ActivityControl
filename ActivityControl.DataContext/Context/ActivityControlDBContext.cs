@@ -389,11 +389,6 @@ namespace ActivityControl.DataContext.Context
                     .HasColumnName("source")
                     .HasMaxLength(100)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.Users)
-                    .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__User__role_id__6E565CE8");
             });
         }
 
